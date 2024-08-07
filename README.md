@@ -1,14 +1,14 @@
 
 # App Microsserviço de formulario 
 
-Microsserviço de formulario usando o recAPTCHA v2 para destribuir email dos formulario submetido corretamente, de acordo com a nessecidade e possivel escalar ou até implementar novos consumidores dos formularios submetidos.
+Microsserviço de formulário usando o recAPTCHA v2 para distribuir email do formulário submetido corretamente, conforme a necessidade e possível escalar ou até implementar novos consumidores dos formulários submetidos.
 
 
 ## Arquitetura
 
-Foi utilizado a arquitetura hexagonal, pelos seguintes motivos: facilidade de manuteção, flexibilidade de alteração, adptabilidade, facilidade na estruturação da regra de negocio sem precisar mexer em varios arquivos.
+Foi utilizado a arquitetura hexagonal, pelos seguintes motivos: facilidade de manutenção, flexibilidade de alteração, adaptabilidade, facilidade na estruturação da regra de negócio sem precisar mexer em vários arquivos.
 
-Com facilidade de um ponto, temos dificuldades em outro, a dificuldades desse projeto e estruturar os arquivos e camadas de acordo com sua responsabilidade, sem se preocupar em ficar repetititvo de mais, pois para cada um arquivo, ele tem que ter sua responsabilidade, com isso o projeto fica com varias pastas e arquivos, mas, cada um fazendo o que deve ser feito!
+Com facilidade de um ponto, temos dificuldades em outro, a dificuldades desse projeto e estruturar os arquivos e camadas de acordo com sua responsabilidade, sem se preocupar em ficar repetitivo de mais, pois para cada um arquivo, ele tem que ter sua responsabilidade, com isso o projeto fica com várias pastas e arquivos, mas, cada um fazendo o que deve ser feito!
 
 ## Stack utilizada
 

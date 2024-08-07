@@ -4,7 +4,7 @@
 <head>
   <title>form hcaptcha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://hcaptcha.com/1/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <input type="text" name="name" placeholder="Name" />
     <input type="number" name="age" placeholder="Age" />
     <input type="text" name="email" placeholder="Email" />
-    <div class="h-captcha" data-sitekey="{{ .SiteKey }}"></div>
+    <div class="g-recaptcha" data-sitekey="{{ .SiteKey }}"></div>
     <br />
     <input type="submit" value="Submit" />
   </form>

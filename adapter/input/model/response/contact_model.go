@@ -1,13 +1,18 @@
 package response
 
 type ContactResponse struct {
-	Name  string `validate:"min=3,max=40,regexp=^[a-zA-Z]*$"`
+	Name  string `validate:"min=3,max=70"`
 	Age   uint8  `validate:"min=10"`
-	Email string `validate:"regexp=^[0-9a-z]+@[0-9a-z]+(\\.[0-9a-z]+)+$"`
+	Email string
 }
 
 type ResponseError struct {
 	TypeErro string
 	Title    string
 	Detail   []string
+}
+
+type RecaptchaResponse struct {
+	Success bool     `json:"success"`
+	Errors  []string `json:"error-codes"`
 }

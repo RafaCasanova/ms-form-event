@@ -1,0 +1,4 @@
+github.com/kataras/hcaptcha v0.0.2 h1:8gPteB5vPD1WvsKv4OcYF+EfntCY7cm7s1b8bB9ai7Y=
+github.com/kataras/hcaptcha v0.0.2/go.mod h1:Ce7mO5B8q8RKyWWWJt2fczJ3O1vTlX+mZ2DZZOMnfSw=
+gopkg.in/validator.v2 v2.0.1 h1:xF0KWyGWXm/LM2G1TrEjqOu4pa6coO9AlWSf3msVfDY=
+gopkg.in/validator.v2 v2.0.1/go.mod h1:lIUZBlB3Im4s/eYp39Ry/wkR02yOPhZ9IwIRBjuPuG8=

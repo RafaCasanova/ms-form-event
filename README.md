@@ -58,7 +58,7 @@ Para usar tem que esta rodando kafka e o banco de dados mongodb, com isso precis
     "TypeErro": "my wrong captcha",
     "Title": "captcha is incorrect",
     "Detail": [
-        {"Error: error class"}", 
+        {"Error: error class"}, 
         {"path: host and path"}
         ]
 }
@@ -73,8 +73,8 @@ Para usar tem que esta rodando kafka e o banco de dados mongodb, com isso precis
     "TypeErro": "something wrong",
     "Title": "what is wrong",
     "Detail": [
-        {"Param: what is wrong"}", 
-        {"OtherParam: what is wrong""}
+        {"Param: what is wrong"}, 
+        {"OtherParam: what is wrong"}
         ]
 }
 ```
@@ -88,7 +88,7 @@ Para usar tem que esta rodando kafka e o banco de dados mongodb, com isso precis
     "TypeErro": "something wrong",
     "Title": "what is wrong",
     "Detail": [
-        {"Error: method error"}", 
+        {"Error: method error"}, 
         {"path: host and path"}
         ]
 }

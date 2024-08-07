@@ -3,7 +3,6 @@ package controller
 import (
 	convert "challenger/adapter/input/model/converter"
 	"challenger/adapter/input/model/response"
-	"challenger/app/domain"
 	"challenger/app/port/input"
 	"encoding/json"
 	"fmt"
@@ -55,6 +54,7 @@ func (c *Controller) CreateContact(w http.ResponseWriter, r *http.Request) {
 
 	if !verifyRecaptcha(r.FormValue("g-recaptcha-response")) {
 		json.NewEncoder(w).Encode(response.ResponseError{TypeErro: "captcha", Title: "the captcha", Detail: []string{"error: captcha is incorrect", "path:" + r.Host + r.RequestURI}})
+		return
 	}
 
 	formContact, err := convert.ConvertHttpRequestToRequestConect(r)
@@ -68,9 +68,11 @@ func (c *Controller) CreateContact(w http.ResponseWriter, r *http.Request) {
 	if erro != nil {
 		json.NewEncoder(w).Encode(response.ResponseError{TypeErro: "invalid parameter", Title: "request parameters invalide", Detail: erro})
 		c.log.Println(erro)
+		return
 	} else {
-		json.NewEncoder(w).Encode(resp.Name)
-		c.service.CreateContactServices(domain.ContactDomain{Email: resp.Email, Name: resp.Name, Age: resp.Age})
+		json.NewEncoder(w).Encode(resp)
+		c.service.CreateContactServices(resp)
+		return
 	}
 }
 

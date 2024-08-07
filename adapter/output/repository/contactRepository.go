@@ -3,20 +3,27 @@ package repository
 import (
 	"challenger/app/domain"
 	"challenger/app/port/output"
+	"context"
+
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func NewContactRepository(database string) output.ContactPort {
+func NewContactRepository(database *mongo.Database) output.ContactPort {
+
 	return &ContactRepository{
-		database,
+		databaseConnection: database, Collection: "conects",
 	}
 }
 
 type ContactRepository struct {
-	databaseConnection string
+	Collection         string
+	databaseConnection *mongo.Database
 }
 
 func (c *ContactRepository) CreateContact(userDomain domain.ContactDomain) (*domain.ContactDomain, error) {
-	panic("unimplemented")
+	collection := c.databaseConnection.Collection(c.Collection)
+	_, err := collection.InsertOne(context.Background(), userDomain)
+	return &userDomain, err
 }
 
 func (c *ContactRepository) FindContactByEmail(email string) (*domain.ContactDomain, error) {

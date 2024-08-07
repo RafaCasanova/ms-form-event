@@ -1,7 +1,7 @@
 
 # App Microsserviço de formulario 
 
-Microsserviço de formulario para destribuir email dos formulario submetido corretamente, de acordo com a nessecidade e possivel escalar ou até implementar novos consumidores dos formularios submetidos.
+Microsserviço de formulario usando o recAPTCHA v2 para destribuir email dos formulario submetido corretamente, de acordo com a nessecidade e possivel escalar ou até implementar novos consumidores dos formularios submetidos.
 
 
 ## Arquitetura
